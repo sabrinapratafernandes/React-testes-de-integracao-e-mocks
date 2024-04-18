@@ -41,4 +41,21 @@ Para testar a integração entre páginas é possível no teste buscarpor um ele
 
 Ex: Clique em um botão
 
-Ao procurar pelo elemento usar o find, não esquecendo de adicionar o await antes do mesmo e de tornar o teste assíncrono com o async. 
+Ao procurar pelo elemento usar o find, não esquecendo de adicionar o await antes do mesmo e de tornar o teste assíncrono com o async.
+
+### Hooks do Jest
+
+Esses hooks ou ganchos são funções qie executam um trecho de qualquer codigo em certa etapa do "ciclo de vida" dos testes. 
+
+Não podem ser chamados dentro de um test!
+
+Alguns deles: 
+
+- beforeAll : Serve para executar algo antes da execução de todos os testes;
+- beforeEach: Serve para executar algo antes da execução de cada um dos testes iniciar;
+- afterAll: Serve para executar algo após a finalização de todos os testes;
+- afterEach: Serve para executar algo após a finalização de cada um dos testes.
+
+Exemplo de uso: 
+
+- beforeEach: limpar o mock de chamada a api antes de cada teste
